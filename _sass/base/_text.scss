@@ -114,3 +114,48 @@ blockquote {
     color: rgba($textColor, .64);
   }
 }
+
+// Add this class to the content where should be bulleted or numbered lists or other
+// text formatting elements
+.text-formatting {
+  li {
+    line-height: 24px;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 24px 0;
+
+    li {
+      position: relative;
+      margin-left: 18px;
+      margin-bottom: 6px;
+    }
+  }
+
+  ul {
+    li {
+      &:before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        left: -18px;
+        top: 10px;
+        border-radius: 50%;
+        background: #C3CBD7;
+      }
+    }
+  }
+
+  ol {
+    list-style: decimal;
+    li {
+      padding-left: 10px;
+    }
+  }
+}

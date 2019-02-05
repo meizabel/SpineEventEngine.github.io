@@ -65,5 +65,79 @@
       color: rgba($textColor, .54);
       margin: 48px 0 12px;
     }
+
+    .software-link-holder {
+      margin-top: 16px;
+
+      .see-software-link {
+        text-decoration: none;
+        color: rgba(0, 0, 0, .87);
+        font-weight: 700;
+        padding-bottom: 2px;
+        border-bottom: 1px dotted rgba(0, 0, 0, .54);
+        @include transition(all .2s ease-in-out);
+
+        &:hover {
+          color: $mainBrandColor;
+          border-bottom-color: $mainBrandColor;
+        }
+      }
+    }
+  }
+}
+
+.table-software {
+  width: 100%;
+  border: none;
+  font-size: 15px;
+  line-height: 1.5;
+
+  thead {
+    tr {
+      th {
+        background-color: transparent;
+        border: none;
+        padding: 8px 0;
+        font-size: 13px;
+        font-weight: 700;
+        color: rgba($textColor, .38);
+        border-bottom: 1px solid rgba(0, 0, 0, .12);
+
+        &:last-child {
+          padding-left: 16px;
+          width: 25%;
+        }
+      }
+    }
+  }
+
+  tbody {
+
+    a {
+      white-space: normal;
+    }
+
+    .first-row-offset {
+      td {
+        padding-top: 16px;
+      }
+    }
+
+    tr {
+      &:first-child {
+        padding-top: 12px;
+      }
+
+      td {
+        border: none;
+        padding: 10px 0;
+
+        &:last-child {
+          padding-left: 16px;
+          width: 25%;
+          opacity: .7;
+        }
+      }
+    }
   }
 }
